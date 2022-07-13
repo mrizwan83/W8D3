@@ -32,3 +32,14 @@
 .profile-nav > li:first-child {
     border-bottom: 1px solid lightgray;
 }
+
+.profile-nav a {
+    display: block;
+    padding: 5px;
+    font-weight: 800;
+  }
+  
+  .profile-nav a:hover {
+    background: lightcyan;
+  }
+
