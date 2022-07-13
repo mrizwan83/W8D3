@@ -1,2 +1,60 @@
 /* PHASE 2: Thumbs */
 
+.profile-friends {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-friends > li {
+    width: 50px;
+    margin: 0 0 10px 0;
+}
+
+.profile-friends > li:nth-child(3n-1) {
+    margin: 0 10px 10px 10px;
+}
+
+.thumb {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.thumb:after {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 55px;
+    background: black;
+    color: aliceblue;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.thumb:before {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -10px;
+    border-top: 5px solid black;
+    border-bottom: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.thumb:hover:before,
+.thumb:hover:after {
+  display: block;
+}
+
+.thumb > img {
+  border-radius: 5px;
+}
